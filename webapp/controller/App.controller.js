@@ -11,7 +11,6 @@ sap.ui.define([
       const oNewTodo = this.getNewTodo();
       this.addTodo(oNewTodo);
       this.resetNewTodo();
-
     },
 
     addTodo: function (oTodo) {
@@ -19,6 +18,13 @@ sap.ui.define([
       const aTodos = oTodoModel.getData();
       aTodos.push(oTodo);
       oTodoModel.setData(aTodos);
+      if (localStorage) {
+        localStorage.setItem("todos", JSON.stringify(aTodos));
+      }
+    },
+
+    setDone: function () {
+      const aTodos = this.getView().getModel("todos").getData();
       if (localStorage) {
         localStorage.setItem("todos", JSON.stringify(aTodos));
       }

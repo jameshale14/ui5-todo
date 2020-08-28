@@ -9,7 +9,7 @@
                <items>
                   <CustomListItem >
                      <HBox alignItems="Center">
-                        <CheckBox selected="{todos>checked}"/>
+                        <CheckBox selected="{todos>checked}" select="setDone"/>
                         <Text class="todo" text="{todos>text}">
                            <customData>
                               <core:CustomData key="done" value="{= ${todos>checked} ? 'done' : 'notDone'}" writeToDom="true"/>
