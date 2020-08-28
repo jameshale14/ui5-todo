@@ -14,6 +14,13 @@ sap.ui.define([
     },
 
     addTodo: function (oTodo) {
+      if (oTodo.text.substring(0, 1) === "!") {
+        oTodo.important = true;
+        oTodo.text = oTodo.text.substring(1);
+      }
+      if (oTodo.text === "") {
+        return;
+      }
       const oTodoModel = this.getView().getModel("todos");
       const aTodos = oTodoModel.getData();
       aTodos.push(oTodo);
