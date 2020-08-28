@@ -18,13 +18,15 @@ sap.ui.define([
       const aTodos = oTodoModel.getData();
       aTodos.push(oTodo);
       oTodoModel.setData(aTodos);
-      if (localStorage) {
-        localStorage.setItem("todos", JSON.stringify(aTodos));
-      }
+      this.saveTodosToLocalStorage(aTodos);
     },
 
     setDone: function () {
       const aTodos = this.getView().getModel("todos").getData();
+      this.saveTodosToLocalStorage(aTodos);
+    },
+
+    saveTodosToLocalStorage: function (aTodos) {
       if (localStorage) {
         localStorage.setItem("todos", JSON.stringify(aTodos));
       }
