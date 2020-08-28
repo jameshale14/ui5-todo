@@ -1,20 +1,38 @@
 sap.ui.define([
-  "sap/ui/core/mvc/Controller",
-  "sap/m/MessageBox"
-], function (Controller, MessageBox) {
+  "sap/ui/core/mvc/Controller"
+], function (Controller) {
   "use strict";
   return Controller.extend("ui5-pwa.controller.App", {
-    onShowHello: function () {
-      // show a native JavaScript alert
-      MessageBox.show(
-        "Hello world", {
-        icon: MessageBox.Icon.INFORMATION,
-        title: "My message box title",
-        // actions: [MessageBox.Action.YES, MessageBox.Action.NO],
-        // emphasizedAction: MessageBox.Action.YES,
-        onClose: function (oAction) { / * do something * / }
+    onInit: function () {
+      this.resetNewTodo();
+    },
+
+    addNewTodo: function () {
+      const oNewTodo = this.getNewTodo();
+      this.addTodo(oNewTodo);
+      this.resetNewTodo();
+
+    },
+
+    addTodo: function (oTodo) {
+      const oTodoModel = this.getView().getModel("todos");
+      const aTodos = oTodoModel.getData();
+      aTodos.push(oTodo);
+      oTodoModel.setData(aTodos);
+      if (localStorage) {
+        localStorage.setItem("todos", JSON.stringify(aTodos));
       }
-      );
+    },
+
+    resetNewTodo: function () {
+      this.getView().getModel("newTodo").setData({
+        text: "",
+        checked: false
+      });
+    },
+
+    getNewTodo: function () {
+      return this.getView().getModel("newTodo").getData();
     }
   });
 });

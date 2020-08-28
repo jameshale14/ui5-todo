@@ -1,0 +1,9 @@
+
+.sapMText[data-done="done"] {
+  /* ... */
+  text-decoration: line-through;
+}
+.sapMText[data-done="notDone"] {
+  /* ... */
+  text-decoration: none;
+}

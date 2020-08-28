@@ -12,14 +12,16 @@ sap.ui.define([
     init: function () {
       // call the init function of the parent
       UIComponent.prototype.init.apply(this, arguments);
-      // set data model
-      var oData = {
-        recipient: {
-          name: "World"
-        }
-      };
-      var oModel = new JSONModel(oData);
-      this.setModel(oModel);
+
+      let oTodos = [];
+      if (localStorage && localStorage.getItem("todos")) {
+        oTodos = JSON.parse(localStorage.getItem("todos"));
+      } else {
+        oTodos = [];
+        localStorage.setItem("todos", JSON.stringify(oTodos));
+      }
+      const oModel = new JSONModel(oTodos);
+      this.setModel(oModel, "todos");
     }
   });
 });
