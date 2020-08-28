@@ -1,0 +1,23 @@
+{
+  "name": "ui5-pwa",
+  "version": "1.0.0",
+  "description": "a ui5-based PWA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ui5 build self-contained --all"
+  },
+  "author": "James Hale",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@ui5/cli": "^2.4.1",
+    "ui5-middleware-livereload": "^0.4.1",
+    "ui5-task-pwa-enabler": "^0.2.2"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-livereload",
+      "ui5-task-pwa-enabler"
+    ]
+  }
+}

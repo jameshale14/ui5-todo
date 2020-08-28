@@ -1,0 +1,12 @@
+<mvc:View
+   controllerName="ui5-pwa.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <App>
+      <Page>
+      <Button
+         text="Say Hello Please"
+         press=".onShowHello"/>
+      </Page>
+   </App>
+</mvc:View>
