@@ -7,7 +7,7 @@
          <VBox height="100%" justifyContent="SpaceBetween">
             <List items="{todos>/}">
                <items>
-                  <CustomListItem >
+                  <CustomListItem highlight="{= ${todos>important} ? 'Indication07' : null}" highlightText="{i18n>important}">
                      <HBox alignItems="Center">
                         <CheckBox selected="{todos>checked}" select="setDone"/>
                         <Text class="todo" text="{todos>text}">

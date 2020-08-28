@@ -35,7 +35,8 @@ sap.ui.define([
     resetNewTodo: function () {
       this.getView().getModel("newTodo").setData({
         text: "",
-        checked: false
+        checked: false,
+        important: false
       });
     },
 
