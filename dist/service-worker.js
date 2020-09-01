@@ -1,11 +1,11 @@
 //This is the service worker with the Advanced caching
 
-const CACHE = "advanced-caching-1598976499314";
+const CACHE = "advanced-caching-1598979143190";
 const precacheFiles = [
-"/images/icon.png",
-"/controller/App-dbg.controller.js",
 "/index.html",
+"/controller/App-dbg.controller.js",
 "/controller/App.controller.js",
+"/images/icon.png",
 "/view/App.view.xml",];
 
 const offlineFallbackPage = "offline.html";

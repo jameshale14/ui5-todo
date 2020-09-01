@@ -80,17 +80,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-
-# UI5 - include theme dist (build only)
-/dist/resources/*
-!/dist/resources/sap-ui-custom*.js
-!/dist/resources/sap
-/dist/resources/sap/*
-!/dist/resources/sap/m 
-/dist/resources/sap/m/*
-!/dist/resources/sap/m/themes
-/dist/resources/sap/m/themes/*
-!/dist/resources/sap/m/themes/sap_fiori_3
+/dist/*
 
 
 # Gatsby files
