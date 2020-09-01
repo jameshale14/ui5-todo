@@ -1,0 +1,9 @@
+
+[data-done="done"] {
+  /* ... */
+  text-decoration: line-through;
+}
+[data-done="notDone"] {
+  /* ... */
+  text-decoration: none;
+}
