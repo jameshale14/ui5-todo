@@ -19,8 +19,8 @@
                   </CustomListItem>
                </items>
             </List>
-            <HBox width="100%">
-               <Input submit="addNewTodo" value="{newTodo>/text}">
+            <HBox class="sapUiTinyMargin">
+               <Input submit="addNewTodo" value="{newTodo>/text}" placeholder="{i18n>inputPlaceholder}">
                   <layoutData>
                      <FlexItemData growFactor="1" />
                   </layoutData>
