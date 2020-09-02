@@ -40,14 +40,14 @@ builder:
           name: To-Do App
           description: Sample to-do-app for testing pwaEnabler
           icons:
-            - src: images/icon.png
+            - src: images/icon-192.png
               type: image/png
               sizes: 192x192
-            - src: images/icon.png
+            - src: images/icon512.png
               type: image/png
               sizes: 512x512
           start_url: /index.html
           scope: /
-          background_color: "#EFF4F9"
-          theme_color: "#3F5161"
+          background_color: "#A3A1C2"
+          theme_color: "#A3A1C2"
           display: standalone
