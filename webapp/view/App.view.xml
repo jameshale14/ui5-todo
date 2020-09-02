@@ -1,4 +1,4 @@
-<mvc:View controllerName="ui5-pwa.controller.App"
+<mvc:View controllerName="todo.controller.App"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc"
    xmlns:core="sap.ui.core">

@@ -2,7 +2,7 @@ sap.ui.define([
   "sap/ui/core/mvc/Controller"
 ], function (Controller) {
   "use strict";
-  return Controller.extend("ui5-pwa.controller.App", {
+  return Controller.extend("todo.controller.App", {
     onInit: function () {
       this.resetNewTodo();
     },

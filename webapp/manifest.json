@@ -1,7 +1,7 @@
 {
   "_version": "1.12.0",
   "sap.app": {
-    "id": "ui5-pwa",
+    "id": "todo",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "title": "{{appTitle}}",
@@ -20,7 +20,7 @@
   },
   "sap.ui5": {
     "rootView": {
-      "viewName": "ui5-pwa.view.App",
+      "viewName": "todo.view.App",
       "type": "XML",
       "async": true,
       "id": "app"
@@ -38,7 +38,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "ui5-pwa.i18n.i18n",
+          "bundleName": "todo.i18n.i18n",
           "supportedLocales": [
             ""
           ],

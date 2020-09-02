@@ -1,2 +1,2 @@
-# ui5-pwa
- Hopefully a UI5-based PWA with offline support
+# To Do Application
+ A UI5-based todo list with PWA and offline support

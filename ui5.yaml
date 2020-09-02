@@ -1,6 +1,6 @@
 specVersion: '2.2'
 metadata:
-  name: ui5-pwa
+  name: todo
 type: application
 framework:
   name: OpenUI5
@@ -36,9 +36,9 @@ builder:
           avoidCaching:
             - /\/realtime-api\/.*/
         manifest:
-          short_name: To-Do App
-          name: To-Do App
-          description: Sample to-do-app for testing pwaEnabler
+          short_name: To do
+          name: To do
+          description: A to do application with offline support
           icons:
             - src: images/icon-192.png
               type: image/png
