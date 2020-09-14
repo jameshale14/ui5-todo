@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ui5 build self-contained --all"
+    "build": "ui5 build --cleanDest self-contained --all",
+    "build-nopwa": "ui5 build --cleanDest --dest dist_nopwa self-contained --all --config ui5-nopwa.yaml"
   },
   "author": "James Hale",
   "license": "Apache-2.0",
