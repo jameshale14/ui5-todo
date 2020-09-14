@@ -35,6 +35,9 @@
       "newTodo": {
         "type": "sap.ui.model.json.JSONModel"
       },
+      "todo": {
+        "type": "sap.ui.model.json.JSONModel"
+      },
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
@@ -43,6 +46,40 @@
             ""
           ],
           "fallbackLocale": ""
+        }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "todo.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "todos",
+          "target": "todos"
+        },
+        {
+          "pattern": "todo/{todoid}",
+          "name": "todo",
+          "target": "todo"
+        }
+      ],
+      "targets": {
+        "todos": {
+          "viewId": "todos",
+          "viewName": "Todos",
+          "viewLevel": 1
+        },
+        "todo": {
+          "viewId": "todo",
+          "viewName": "Todo",
+          "viewLevel": 2
         }
       }
     }

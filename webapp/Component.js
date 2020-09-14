@@ -22,6 +22,13 @@ sap.ui.define([
       }
       const oModel = new JSONModel(oTodos);
       this.setModel(oModel, "todos");
-    }
+      this.getRouter().initialize();
+    },
+
+    saveTodosToLocalStorage: function (aTodos) {
+      if (localStorage) {
+        localStorage.setItem("todos", JSON.stringify(aTodos));
+      }
+    },
   });
 });

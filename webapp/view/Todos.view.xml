@@ -1,0 +1,31 @@
+<mvc:View controllerName="todo.controller.Todos"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:core="sap.ui.core">
+   <Page title="{i18n>appTitle}">
+      <VBox height="100%" justifyContent="SpaceBetween">
+         <List items="{todos>/}" mode="SingleSelectMaster" itemPress="onTodoSelect">
+            <items>
+               <CustomListItem highlight="{= ${todos>important} ? 'Indication07' : null}" type="Navigation" highlightText="{i18n>important}">
+                  <HBox alignItems="Center">
+                     <CheckBox selected="{todos>checked}" select="setDone"/>
+                     <Text class="todo" text="{todos>text}">
+                        <customData>
+                           <core:CustomData key="done" value="{= ${todos>checked} ? 'done' : 'notDone'}" writeToDom="true"/>
+                        </customData>
+                     </Text>
+                  </HBox>
+               </CustomListItem>
+            </items>
+         </List>
+         <HBox class="sapUiTinyMargin">
+            <Input submit="addNewTodo" value="{newTodo>/text}" placeholder="{i18n>inputPlaceholder}">
+               <layoutData>
+                  <FlexItemData growFactor="1" />
+               </layoutData>
+            </Input>
+            <Button icon="sap-icon://add" type="Transparent" press="addNewTodo"/>
+         </HBox>
+      </VBox>
+   </Page>
+</mvc:View>
