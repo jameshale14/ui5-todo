@@ -1,0 +1,32 @@
+{
+	"name": "todo",
+	"version": "1.0.0",
+	"buildTimestamp": "202009141837",
+	"scmRevision": "",
+	"libraries": [
+		{
+			"name": "sap.ui.core",
+			"version": "1.80.0",
+			"buildTimestamp": "202009141837",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.m",
+			"version": "1.80.0",
+			"buildTimestamp": "202009141837",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.layout",
+			"version": "1.80.0",
+			"buildTimestamp": "202009141837",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.unified",
+			"version": "1.80.0",
+			"buildTimestamp": "202009141837",
+			"scmRevision": ""
+		}
+	]
+}

@@ -1,2 +1,2 @@
-# To Do Application
- A UI5-based todo list with PWA and offline support
+# ui5-pwa
+ a simple ui5-based PWA
