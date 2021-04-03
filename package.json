@@ -1,10 +1,11 @@
 {
   "name": "todo",
   "version": "1.0.0",
-  "description": "a ui5-based PWA",
+  "description": "A ui5-based PWA demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ui5 serve",
+    "start-dist": "firebase serve",
     "build": "ui5 build --cleanDest self-contained --all",
     "build-nopwa": "ui5 build --cleanDest --dest dist_nopwa self-contained --all --config ui5-nopwa.yaml"
   },
