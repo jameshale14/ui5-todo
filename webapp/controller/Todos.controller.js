@@ -29,12 +29,12 @@ sap.ui.define([
       const aTodos = oTodoModel.getData();
       aTodos.push(oTodo);
       oTodoModel.setData(aTodos);
-      this.getOwnerComponent.saveTodosToLocalStorage(aTodos);
+      this.getOwnerComponent().saveTodosToLocalStorage(aTodos);
     },
 
     setDone: function () {
       const aTodos = this.getView().getModel("todos").getData();
-      this.getOwnerComponent.saveTodosToLocalStorage(aTodos);
+      this.getOwnerComponent().saveTodosToLocalStorage(aTodos);
     },
 
     onTodoSelect: function (oEvent) {
